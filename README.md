@@ -10,19 +10,14 @@ With nearly 50% of Nigerians living below the average income (World Bank), findi
 3. Low-quality, wasteful purchases.
 
 **Core Features**
- Real-Time Price Comparison: Scrapes prices from multiple Nigerian e-commerce platforms.
-
- Best Value Recommendations: AI ranks products by price, durability, and reviews.
-
- Budget-Based Search: Filters products within user-defined budgets.
-
- Alternative Suggestions: Offers cheaper or higher-quality options.
-
- Customizable Results: Users choose how many top products to view (e.g., Top 5) with direct purchase links.
-
+ 1. Real-Time Price Comparison: Scrapes prices from multiple Nigerian e-commerce platforms.
+ 2. Best Value Recommendations: AI ranks products by price, durability, and reviews.
+ 3. Budget-Based Search: Filters products within user-defined budgets.
+ 4. Alternative Suggestions: Offers cheaper or higher-quality options.
+ 5. Customizable Results: Users choose how many top products to view (e.g., Top 5) with direct purchase links.
 
  **Project Structure**
- PriceComparisonNG/
+ SmartPickNG/
 ├── scrapers/           # Web scraping scripts (e.g., jumia.py, konga.py)
 ├── ai/                # AI logic (e.g., recommender.py, sentiment.py)
 ├── frontend/          # Flask app and UI (e.g., app.py, templates/, static/)
