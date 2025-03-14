@@ -10,8 +10,9 @@ load_dotenv()
 openai_api_key = os.getenv("OPENAI_API_KEY")
 
 # initialize OpenAI client with timeout and retries
+path="C:/Users/USER/Desktop/llm_exe/Neural-Drip/backend/vector_db"
 client = OpenAI(api_key=openai_api_key, timeout=30)
-chroma_client = chromadb.PersistentClient(path="backend/vector_db")
+chroma_client = chromadb.PersistentClient(path=path)
 collection = chroma_client.get_collection(name="products")
 
 

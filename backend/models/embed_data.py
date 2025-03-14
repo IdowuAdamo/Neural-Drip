@@ -12,8 +12,10 @@ openai_api_key = os.getenv("OPENAI_API_KEY")
 client = OpenAI(api_key=openai_api_key)
 
 # Load and preprocess CSV data
+#C:\Users\USER\Desktop\llm_exe\Neural-Drip\data\jumia_and_konga_data2.csv
+data_path='C:/Users/USER/Desktop/llm_exe/Neural-Drip/data'
 products = []
-csv_path = os.path.join("data", "jumia_and_konga_data2.csv")
+csv_path = os.path.join(data_path, "jumia_and_konga_data2.csv")
 print(f"Attempting to open CSV at: {csv_path}")
 try:
     with open(csv_path, "r", encoding="utf-8") as f:
@@ -91,7 +93,7 @@ safe_texts = [t.encode("ascii", "ignore").decode("ascii") for t in texts[:2]]
 print(f"Prepared {len(texts)} texts for embedding: {safe_texts}")
 
 # Generate embeddings with batching
-batch_size = 1000
+batch_size = 160
 embeddings = []
 for i in range(0, len(texts), batch_size):
     batch = texts[i:i + batch_size]
@@ -100,7 +102,8 @@ for i in range(0, len(texts), batch_size):
     embeddings.extend([r.embedding for r in response.data])
 
 # Initialize Chroma client
-chroma_client = chromadb.PersistentClient(path="backend/vector_db")
+path='C:/Users/USER/Desktop/llm_exe/Neural-Drip/backend/vector_db'
+chroma_client = chromadb.PersistentClient(path=path)
 chroma_client.delete_collection("products")  # Reset to avoid duplicates
 collection = chroma_client.create_collection(name="products")
 
