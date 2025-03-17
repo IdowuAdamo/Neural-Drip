@@ -133,7 +133,7 @@ def get_recommendations(query, budget, num_results, source_filter="All"):
 # Testing
 if __name__ == "__main__":
     query = "android phone with good specs for content creation"
-    budget = 500000
+    budget = 200000
     num_results = 1 
     source_filter = "All"
     recommendation = get_recommendations(query, budget, num_results, source_filter)
