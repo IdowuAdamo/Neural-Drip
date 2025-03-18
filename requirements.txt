@@ -6,4 +6,5 @@ numpy
 openai
 chromadb
 python-dotenv
-streamlit     
+streamlit 
+pysqlite3-binary # works only on linus, remove if not on linus, was added for deployment on streamlit    
