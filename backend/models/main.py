@@ -1,3 +1,4 @@
+import sqlite3 
 import os
 import csv
 import time
@@ -22,7 +23,7 @@ openai_api_key = os.getenv("OPENAI_API_KEY")
 
 # Paths
 DATA_PATH = "C:/Code/neural_drip/data"
-CSV_PATH = os.path.join(DATA_PATH, "jumia_and_konga_data2.csv")
+CSV_PATH = os.path.join(DATA_PATH, "jumia_and_konga_data3.csv")
 VECTOR_DB_PATH = "C:/Code/neural_drip/backend/vector_db"
 
 # Initialize OpenAI and ChromaDB clients
