@@ -60,7 +60,7 @@ python backend/models/main.py
 This processes the CSV, generates embeddings, and stores them in backend/vector_db/. Comment out afterward to avoid re-running.
 
 6. Run the Streamlit App:
-streamlit run backend/models/app.py
+streamlit run app.py
 
 7. Contributing
 Fork the repo, make changes, and submit a pull request to IdowuAdamo/Neural-Drip.
