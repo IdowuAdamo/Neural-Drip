@@ -2,9 +2,9 @@ requests
 beautifulsoup4
 selenium
 pandas
-numpy
+numpy<2.0 #numpy
 openai
-chromadb
+chromadb==0.4.22 #chromadb
 python-dotenv
 streamlit 
-pysqlite3-binary # works only on linus, remove if not on linus, was added for deployment on streamlit    
+#pysqlite3-binary # works only on linus, remove if not on linus, was added for deployment on streamlit    

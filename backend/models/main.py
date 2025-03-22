@@ -7,7 +7,7 @@ import chromadb
 from openai import OpenAI
 import logging
 from functools import lru_cache
-from collections import Counter
+from collections import Counter 
 
 # Configure logging
 logging.basicConfig(
@@ -91,7 +91,7 @@ class DataEmbedder:
 
     def embed_data(self):
         texts = [f"{p['product_name']} - ₦{p['price_ngn']} - Discount: {p['discount']*100}% - Rating: {p['rating']} - Source: {p['source']}" 
-                 for p in self.products]
+                 for p in self.products] 
         ids = [f"prod_{i}" for i in range(len(self.products))]
         metadatas = [{"price_ngn": p["price_ngn"], "discount": p["discount"], "rating": p["rating"], 
                       "url": p["product_link"], "source": p["source"]} for p in self.products]
